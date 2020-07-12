@@ -1,0 +1,19 @@
+# shujia#include <stdio.h>
+#include <stdlib.h>
+struct person
+{
+	
+	char name[20];int num;	
+	int score;
+	struct person *next;
+};
+int main(int argc,char** argv)
+{
+	struct person *p;
+	p=(struct person*)malloc(sizeof(struct person));
+	scanf("%s%d%d",p->name,&p->num,&p->score);
+	p->next=NULL;
+	printf("%s %d %d\n",p->name,p->num,p->score);
+	free(p);
+	return 0;
+}
