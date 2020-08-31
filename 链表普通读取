@@ -1,0 +1,41 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <process.h>
+
+int main(void)
+{
+    FILE *fp;
+    FILE *fq;
+    char s,a;
+    fp=fopen("a.txt","w");
+    fq=fopen("b.txt","w");
+        fprintf(fp,"hello,we are from china\n");
+        fprintf(fp,"china is the best country in the world\n");
+        fprintf(fp,"i am chinese student");
+    fclose(fp);
+    if((fp=fopen("a.txt","r"))==NULL)
+    {
+        printf("open file fail\n");
+        return 1;
+    }
+    while(!feof(fp))
+    {
+            s=fgetc(fp);
+            fputc(s,fq);
+            putchar(s);
+    }
+    fclose(fp);
+    fclose(fq);
+    if((fq=fopen("b.txt","r"))==NULL)
+    {
+        printf("open file fail\n");
+        return 1;
+    }
+    while(!feof(fq))
+    {
+        a=fgetc(fq);
+        putchar(a);
+    }
+    fclose(fq);
+    return 0;
+}
