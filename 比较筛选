@@ -1,0 +1,66 @@
+#include <stdio.h>
+
+
+int main()
+{
+    int x,y;
+    printf(" 输入当前速度和限速\n");
+    scanf ("%d%d",&x,&y);
+      if (x> y*1.5)
+        {
+            printf ("Revoke driver's license");
+        }
+       else if (x> y*1.1)
+
+{
+       printf ("A fine of 200 yuan");
+}
+           else
+{
+        printf ("no problem");
+}
+
+}
+
+
+/*
+int main()
+ {
+     int n;
+     printf("输入该学生的成绩");
+     scanf ("%d",&n);
+     if (n>=90)
+        printf("grade a\n");
+        else if (80<=n)
+            printf("grade b\n");
+            else if (70<=n)
+                printf("grade c\n");
+               else if(60<=n)
+                   printf("grade d\n");
+                 else
+                   printf("grade e\n");
+            return 0;
+
+ }
+*/
+
+
+
+
+/*
+#include <stdio.h>
+
+int main()
+ {
+ int x,y,z,a;
+printf("enter 3 number\n");
+scanf ("%d%d%d",&x,&y,&z);
+if (x>y)
+a=x,x=y,y=a;
+ if(x>z)
+a=x,x=z,z=a;
+if (y>z)
+a=y,y=z,z=a;
+printf ("%d<%d<%d",x,y,z);
+ }
+*/
